@@ -1,0 +1,23 @@
+<?php $_product = $block->getProduct(); ?>
+<div class="social-media-icons">
+    <!-- WhatsApp -->
+    <a target="_blank" href="https://api.whatsapp.com/send?text=<?php echo urlencode($_product->getProductUrl());?>">
+        <img src="<?php echo $this->getViewFileUrl('Magento_Catalog::images/whatsapp-share.png'); ?>" alt="WhatsApp" width="5%">
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($_product->getProductUrl());?>&t=<?php echo urlencode($_product->getName())?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on facebook">
+        <img src="<?php echo $this->getViewFileUrl('Magento_Catalog::images/facebook-share.png'); ?>" alt="Facebook" width="5%">
+    </a>
+    <!-- TWITTER -->
+    <a href="http://twitter.com/home/?status=<?php echo urlencode($_product->getProductUrl());?>(<?php echo urlencode($_product->getName())?>)" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on Twitter">
+        <img src="<?php echo $this->getViewFileUrl('Magento_Catalog::images/twitter-share.png'); ?>" alt="Twitter" width="5%">
+    </a>
+    <!-- Pinterest -->
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode($_product->getProductUrl()); ?>&media=<?php echo urlencode($_product->getImageUrl());?> &description=<?php echo urlencode($_product->getName()); ?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Pin it">
+        <img src="<?php echo $this->getViewFileUrl('Magento_Catalog::images/pinterest-share.png'); ?>" alt="Pinterest" width="5%">
+    </a>
+    <!-- Google Plus -->
+    <a href="https://plus.google.com/share?url=<?php echo urlencode($_product->getProductUrl()); ?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on Google Plus">
+        <img src="<?php echo $this->getViewFileUrl('Magento_Catalog::images/google-plus-share.png'); ?>" alt="Google Plus" width="5%">
+    </a>
+</div>
