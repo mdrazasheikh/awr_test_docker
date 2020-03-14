@@ -51,3 +51,22 @@ php bin/magento setup:install \
 * Once finished all products will be loaded in admin panel.
 * Visit the frontend website to view these products.
 * Note that `reserved` products will not be shown on the frontend website
+
+
+### Assumptions
+* Vehicles are loaded via cron job once a day at 1AM
+* Vehicles can be pulled manually via front API : `http://local.domain.com:6080/autotrustimporter/index`
+* Only non reserved vehicle are shown in the listing
+* Not all the options available with the APIs are shown to Customer
+* Products are taken into account as simple products
+* All the products are assigned to <code>Preowned vehicles</code> category. The landing page is not configured to show any products. Click on the <code>Preowned vehicles</code> to load the active vehicle list
+ 
+## License
+
+Each Magento source file included in this distribution is licensed under OSL 3.0 or the Magento Enterprise Edition (MEE) license.
+
+[Open Software License (OSL 3.0)](https://opensource.org/licenses/osl-3.0.php).
+Please see [LICENSE.txt](https://github.com/magento/magento2/blob/2.3-develop/LICENSE.txt) for the full text of the OSL 3.0 license or contact license@magentocommerce.com for a copy.
+
+Subject to Licensee's payment of fees and compliance with the terms and conditions of the MEE License, the MEE License supersedes the OSL 3.0 license for each source file.
+Please see LICENSE_EE.txt for the full text of the MEE License or visit https://magento.com/legal/terms/enterprise.
