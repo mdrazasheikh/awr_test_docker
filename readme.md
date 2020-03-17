@@ -39,8 +39,8 @@ php bin/magento setup:install \
 --admin-use-security-key=1 \
 --session-save=files
 ```
-* RUN `php src/bin/magento -f setup:static-content:deploy`
-* Once finished move contents of `social_images` to `src/pub/static/frontend/Magento/luma/en_US/Magento_Catalog/images/`
+* RUN `php bin/magento -f setup:static-content:deploy`
+* Once finished move contents of `social_images` to `src/pub/static/frontend/Magento/luma/en_US/Magento_Catalog/images/` on the host machine
 * Open your browser. visit http://local.domain.com:6080/admin
 * Login with `admin:admin123`
 * Go product categories. Create a category under default root category. Rename this to `Preowned Vehicles`. Rename the default root category to some meaningful name.
